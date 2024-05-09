@@ -66,6 +66,7 @@ MonoBehaviour:
   - UnityEngine.UIModule.dll
   - mscorlib
   - RoslynCSharp.Examples.dll
+  - netstandard
   referenceAssets: []
   defineSymbols: []
   allowHotReloading: 1
