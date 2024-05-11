@@ -61,7 +61,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
             else if (domain.SecurityResult.IsSecurityVerified == false)
                 errorSpace.text = "Your code failed code security verification";
             else
-                errorSpace.text = "Your code does not define a class. You must include one class definition of any name that inherits from 'RoslynCSharp.Example.MazeCrawler'";
+                errorSpace.text = "Your code does not define a class. You must include one class definition'";
         }
         else
         {
