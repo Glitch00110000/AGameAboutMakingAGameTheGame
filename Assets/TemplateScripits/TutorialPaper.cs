@@ -7,6 +7,7 @@ public class TutorialPaper : MonoBehaviour
 {
     public GameObject TutorialImageObject;
     public TextMeshProUGUI TutorialTextSpaceObj;
+    public TextMeshProUGUI TutorialTextObj;
 
     [SerializeField]
     private string TutorialText; 
@@ -16,7 +17,7 @@ public class TutorialPaper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TutorialTextSpaceObj.text = TutorialText;
+        TutorialTextObj.text = TutorialText;
     }
 
     public void OpenTutorialWindow()

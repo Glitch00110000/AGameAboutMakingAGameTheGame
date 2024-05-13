@@ -67,6 +67,7 @@ MonoBehaviour:
   - mscorlib
   - RoslynCSharp.Examples.dll
   - netstandard
+  - Assembly-CSharp.dll
   referenceAssets: []
   defineSymbols: []
   allowHotReloading: 1

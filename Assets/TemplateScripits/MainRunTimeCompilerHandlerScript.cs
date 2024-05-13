@@ -5,6 +5,7 @@ using RoslynCSharp;
 using Unity.VisualScripting;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     [SerializeField]
     private string tipText;
 
+
+    [SerializeField]
+    private string CurrentSceneName;
 
     //private variavles
     private bool tipEnabler = true;
@@ -61,7 +65,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
             else if (domain.SecurityResult.IsSecurityVerified == false)
                 errorSpace.text = "Your code failed code security verification";
             else
-                errorSpace.text = "Your code does not define a class. You must include one class definition of any name that inherits from 'RoslynCSharp.Example.MazeCrawler'";
+                errorSpace.text = "Your code does not define a class. You must include one class definition'";
         }
         else
         {
@@ -91,6 +95,11 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
             tipSpaceObject.SetActive(false);
             tipEnabler = true;
         }
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(CurrentSceneName);
     }
 
 }
