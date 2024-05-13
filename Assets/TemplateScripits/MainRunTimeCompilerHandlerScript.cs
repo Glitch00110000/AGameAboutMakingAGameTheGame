@@ -5,6 +5,7 @@ using RoslynCSharp;
 using Unity.VisualScripting;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     [SerializeField]
     private string tipText;
 
+
+    [SerializeField]
+    private string CurrentSceneName;
 
     //private variavles
     private bool tipEnabler = true;
@@ -91,6 +95,11 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
             tipSpaceObject.SetActive(false);
             tipEnabler = true;
         }
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(CurrentSceneName);
     }
 
 }

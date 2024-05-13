@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AssemblyMachineScript : MonoBehaviour
 {
@@ -12,7 +13,13 @@ public class AssemblyMachineScript : MonoBehaviour
     private GameObject player;
     private float timer = 2.16f;
 
+
     private bool doneAssembling = false;
+    private bool doneDissambling = false;
+
+    [SerializeField]
+    private string LevelName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +48,17 @@ public class AssemblyMachineScript : MonoBehaviour
             }
         }
 
+        if (!isAssembler && doneDissambling)
+        {
+            timer -= Time .deltaTime;
+            if(timer < 0)
+            {
+                NextLevel();
+            }
+        }
+       
+
+
     }
 
 
@@ -53,12 +71,18 @@ public class AssemblyMachineScript : MonoBehaviour
         }
     }
 
+    private void NextLevel()
+    {
+        SceneManager.LoadScene(LevelName);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isAssembler && collision.tag == "Player")
         {
             player.SetActive(false);
             ChangeAnimation("AssemblyMachineAnimationDissassembling");
+            doneDissambling = true;
         }
     }
 }

@@ -17,8 +17,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private MainRunTimeCompilerHandlerScript scriptRunner;
 
+    [SerializeField]
+    private TutorialPaper tutPaper;
 
-    private Collider2D door;
+
+    private DoorScript door;
     private bool canBeOpened = false;
     // Start is called before the first frame update
 
@@ -37,7 +40,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (canBeOpened)
             {
-                scriptProxy.SafeCall("OpedDoor",door,canBeOpened);
+                scriptProxy.SafeCall("OpedDoor",door);
             }
         }
     }
@@ -46,17 +49,22 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.tag == "Tutorial")
         {
-            Debug.Log("tut");
+            tutPaper.OpenTutorialWindow();
         }
         if (collision.tag == "Door")
         {
-            door = collision;
+            door = collision.GetComponent<DoorScript>();
             canBeOpened = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.tag == "Tutorial")
+        {
+            tutPaper.OpenTutorialWindow();
+        }
+
         if (collision.tag == "Door")
         {
             door = null;
