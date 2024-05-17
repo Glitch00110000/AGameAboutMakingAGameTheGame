@@ -25,6 +25,9 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     public GameObject tipSpaceObject;
     public TextMeshProUGUI tipTextSpaceObj;
 
+    public GameObject tutorialPanel;
+    public GameObject closeButton;
+
     [SerializeField]
     private string tipText;
 
@@ -100,6 +103,18 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene(CurrentSceneName);
+    }
+
+    public void OpenTutPaperTextPanel()
+    {
+        tutorialPanel.SetActive(true);
+        closeButton.SetActive(true);
+    }
+
+    public void Close()
+    {
+        tutorialPanel.SetActive(false);
+        closeButton.SetActive(false);
     }
 
 }
