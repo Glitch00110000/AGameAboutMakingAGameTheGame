@@ -79,7 +79,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 
     public void DisposeOfProxy()
     {
-        if (!proxy.IsDisposed)
+        if (!proxy.IsDisposed && proxy != null)
         {
             proxy.Dispose();
         }

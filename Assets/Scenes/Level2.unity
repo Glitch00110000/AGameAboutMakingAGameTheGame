@@ -1492,6 +1492,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647190222}
   m_CullTransparentMesh: 1
+--- !u!114 &655060016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4860686259737174718, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+  m_PrefabInstance: {fileID: 1417118390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &668323275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2626,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183409040}
   m_CullTransparentMesh: 1
+--- !u!1 &1185269266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 882308327150992729, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+  m_PrefabInstance: {fileID: 1417118390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1198598225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,8 +2755,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1198598231}
   moveSpeed: 2
-  scriptRunner: {fileID: 1741198641}
+  scriptRunner: {fileID: 1417118391}
   tutPaper: {fileID: 1439714069}
+  tutPaperOpenButton: {fileID: 1185269266}
 --- !u!61 &1198598230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2946,6 +2963,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384943254}
   m_CullTransparentMesh: 1
+--- !u!1001 &1417118390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9316467
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43503404
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.912623
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157412340962369589, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689253742804565986, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_Text
+      value: "using System.Collections;\r\nusing System.Collections.Generic;\r\nusing
+        UnityEngine;\r\n\r\npublic class DefaultScript : MonoBehaviour\r\n{\r\n   
+        public void OpedDoor(DoorScript door)\r\n    {\r\n\r\n    }\r\n}\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: tipText
+      value: 'Try something like this:      door.OpenOrCloseDoor()   and also Use
+        Input methods the same way you did level prior but instead of  GetKey   you
+        have to use GetKeyDown'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: CurrentSceneName
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836501594295196874, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_Name
+      value: ----UI---- (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+--- !u!114 &1417118391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+  m_PrefabInstance: {fileID: 1417118390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b534f7bf190eeac4a993d867667a272d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1419745608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,12 +3118,13 @@ PrefabInstance:
     - target: {fileID: 3224519024956179909, guid: 20b16ba76f391ba4b8b84808af04dc3d, type: 3}
       propertyPath: TutorialText
       value: We have to access a function inside the doors script we can do that
-        by calling OpenOrCloseDoor() function inside the door object
+        by calling OpenOrCloseDoor() function inside the door object also keep in
+        mind that your code is executing once every frame
       objectReference: {fileID: 0}
     - target: {fileID: 3224519024956179909, guid: 20b16ba76f391ba4b8b84808af04dc3d, type: 3}
       propertyPath: TutorialTextObj
       value: 
-      objectReference: {fileID: 1596003183}
+      objectReference: {fileID: 655060016}
     - target: {fileID: 3224519024956179909, guid: 20b16ba76f391ba4b8b84808af04dc3d, type: 3}
       propertyPath: TutorialImageObject
       value: 
@@ -4286,7 +4388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1628353998
 Transform:
   m_ObjectHideFlags: 0
@@ -4506,6 +4608,8 @@ MonoBehaviour:
   InputField: {fileID: 1085009613}
   tipSpaceObject: {fileID: 1719924578}
   tipTextSpaceObj: {fileID: 1183409042}
+  tutorialPanel: {fileID: 0}
+  closeButton: {fileID: 0}
   tipText: 'Tip: you can acces the function by calling door.OpenOrCloseDoor() aslo
     dont forgget to chceck Inputs'
   CurrentSceneName: Level2
@@ -6122,6 +6226,7 @@ SceneRoots:
   - {fileID: 523730045}
   - {fileID: 460574232}
   - {fileID: 1628353998}
+  - {fileID: 1417118390}
   - {fileID: 1585215370}
   - {fileID: 361601565}
   - {fileID: 2095854425}

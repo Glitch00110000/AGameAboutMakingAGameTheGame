@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private TutorialPaper tutPaper;
 
+    public GameObject tutPaperOpenButton;
+
 
     private DoorScript door;
     private bool canBeOpened = false;
@@ -49,7 +51,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.tag == "Tutorial")
         {
-            tutPaper.OpenTutorialWindow();
+            tutPaperOpenButton.SetActive(true);
         }
         if (collision.tag == "Door")
         {
@@ -62,7 +64,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.tag == "Tutorial")
         {
-            tutPaper.OpenTutorialWindow();
+            tutPaperOpenButton.SetActive(false);
         }
 
         if (collision.tag == "Door")
