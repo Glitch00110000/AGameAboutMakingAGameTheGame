@@ -17,6 +17,8 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 
     public ScriptProxy proxy = null;
 
+    private string SavedCode;
+
     //UI stuff
     public TextMeshProUGUI errorSpace = null;
     // public TextMeshProUGUI tipSpace = null; // this might be acceset from diferent script
@@ -41,6 +43,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SavedCode = InputField.text;
         // should the compiler be inicialized
         bool initCompiler = true;
 
@@ -57,6 +60,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 
     public void CompileScript()
     {
+        errorSpace.text = "error space";
         string source = InputField.text;
         ScriptType type = domain.CompileAndLoadMainSource(source);
 
@@ -79,6 +83,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 
     public void DisposeOfProxy()
     {
+        errorSpace.text = "error space";
         if (!proxy.IsDisposed && proxy != null)
         {
             proxy.Dispose();
@@ -115,6 +120,16 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     {
         tutorialPanel.SetActive(false);
         closeButton.SetActive(false);
+    }
+
+    public void SaveCode()
+    {
+        SavedCode = InputField.text;
+    }
+
+    public void LoadCode()
+    {
+        InputField.text = SavedCode;
     }
 
 }

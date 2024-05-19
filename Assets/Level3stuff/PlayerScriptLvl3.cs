@@ -22,6 +22,9 @@ public class PlayerScriptLvl3 : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D box;
+
+    [SerializeField]
+    public GameObject tutPaperOpenButton;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -46,7 +49,7 @@ public class PlayerScriptLvl3 : MonoBehaviour
     {
         if (collision.tag == "Tutorial")
         {
-            tutPaper.OpenTutorialWindow();
+            tutPaperOpenButton.SetActive(true);
         }
     }
 
@@ -54,7 +57,7 @@ public class PlayerScriptLvl3 : MonoBehaviour
     {
         if (collision.tag == "Tutorial")
         {
-            tutPaper.OpenTutorialWindow();
+            tutPaperOpenButton.SetActive(false);
         }
 
     }
