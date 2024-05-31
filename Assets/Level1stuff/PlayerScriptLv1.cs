@@ -23,6 +23,9 @@ public class PlayerScriptLv1 : MonoBehaviour
     [SerializeField]
     public GameObject tutPaperOpenButton;
 
+    [SerializeField]
+    private Animator animator;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -37,6 +40,23 @@ public class PlayerScriptLv1 : MonoBehaviour
         if (scriptProxy != null)
         {
             scriptProxy.SafeCall("PlayerMovement", gameObject, moveSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.Play("moveRight");
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            animator.Play("moveLeft");
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            animator.Play("moveBack");
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            animator.Play("moveFront");
         }
     }
 

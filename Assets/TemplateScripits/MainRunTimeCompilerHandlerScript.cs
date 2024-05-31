@@ -21,6 +21,9 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 
     //UI stuff
     public TextMeshProUGUI errorSpace = null;
+
+    [SerializeField]
+    private GameObject ErrorShower;
     // public TextMeshProUGUI tipSpace = null; // this might be acceset from diferent script
     public TMP_InputField InputField;
 
@@ -73,10 +76,12 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
                 errorSpace.text = "Your code failed code security verification";
             else
                 errorSpace.text = "Your code does not define a class. You must include one class definition'";
+            ErrorShower.SetActive(true);
         }
         else
         {
             // instantiate the proxy (the script written by a player)
+            ErrorShower.SetActive(false);
             proxy = type.CreateInstance(gameObject);
         }
     }

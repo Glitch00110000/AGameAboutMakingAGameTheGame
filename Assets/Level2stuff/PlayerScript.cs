@@ -22,6 +22,9 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject tutPaperOpenButton;
 
+    [SerializeField]
+    private Animator animator;
+
 
     private DoorScript door;
     private bool canBeOpened = false;
@@ -33,6 +36,23 @@ public class PlayerScript : MonoBehaviour
         scriptProxy = scriptRunner.proxy;
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
+
+        if (moveInput.x > 0)
+        {
+            animator.Play("moveRight");
+        }
+        else if (moveInput.x < 0)
+        {
+            animator.Play("moveLeft");
+        }
+        else if (moveInput.y > 0)
+        {
+            animator.Play("moveBack");
+        }
+        else if (moveInput.y < 0)
+        {
+            animator.Play("moveFront");
+        }
 
         moveInput.Normalize();
 

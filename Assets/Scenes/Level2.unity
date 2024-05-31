@@ -817,8 +817,8 @@ Camera:
   m_GameObject: {fileID: 523730042}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.11372549, g: 0.14117648, b: 0.18039216, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2758,6 +2758,7 @@ MonoBehaviour:
   scriptRunner: {fileID: 1417118391}
   tutPaper: {fileID: 1439714069}
   tutPaperOpenButton: {fileID: 1185269266}
+  animator: {fileID: 1198598226}
 --- !u!61 &1198598230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4605,6 +4606,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d63caa786bb07a04dbed0198792760d9, type: 2}
   - {fileID: 11400000, guid: e877e94ac5f9c7c4192a879696d5e5d8, type: 2}
   errorSpace: {fileID: 643114709}
+  ErrorShower: {fileID: 0}
   InputField: {fileID: 1085009613}
   tipSpaceObject: {fileID: 1719924578}
   tipTextSpaceObj: {fileID: 1183409042}

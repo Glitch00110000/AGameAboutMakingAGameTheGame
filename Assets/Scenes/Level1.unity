@@ -411,7 +411,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3007476, g: 0.3608448, b: 0.4528302, a: 0}
+  m_BackGroundColor: {r: 0.112281956, g: 0.13871485, b: 0.1792453, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1216,6 +1216,7 @@ MonoBehaviour:
   scriptRunner: {fileID: 1741198641}
   tutPaper: {fileID: 1439714069}
   tutPaperOpenButton: {fileID: 1365226405}
+  animator: {fileID: 1198598226}
 --- !u!1 &1365226405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 882308327150992729, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
