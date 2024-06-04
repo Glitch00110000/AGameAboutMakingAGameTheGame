@@ -24,6 +24,9 @@ public class DoorScript : MonoBehaviour
     [SerializeField]
     private Sprite ClosedDoorTile;
 
+    [SerializeField]
+    private AudioSource sound;
+
     private bool DoorSwitch = true;
 
 
@@ -45,6 +48,7 @@ public class DoorScript : MonoBehaviour
             selfColliderClosed.enabled = false;
             selfColliderOpened1.enabled = true;
             selfColliderOpened2.enabled = true;
+            sound.Play();
         }
         else
         {
@@ -53,6 +57,7 @@ public class DoorScript : MonoBehaviour
             selfColliderClosed.enabled = true;
             selfColliderOpened1.enabled = false;
             selfColliderOpened2.enabled = false;
+            sound.Play();
         }
     }
 

@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 1198598225}
     - target: {fileID: 6145631300462123266, guid: e49ed141786f93d4d9192a8030f249d2, type: 3}
       propertyPath: LevelName
-      value: Level4
+      value: MainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
