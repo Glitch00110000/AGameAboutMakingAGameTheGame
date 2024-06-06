@@ -62,7 +62,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (canBeOpened)
             {
-                scriptProxy.SafeCall("OpedDoor",door);
+                scriptProxy.SafeCall("OpenDoor",door);
             }
         }
     }

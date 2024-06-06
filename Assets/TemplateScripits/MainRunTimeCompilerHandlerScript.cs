@@ -137,4 +137,9 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
         InputField.text = SavedCode;
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }

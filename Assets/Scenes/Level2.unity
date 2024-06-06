@@ -3016,7 +3016,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: "using System.Collections;\r\nusing System.Collections.Generic;\r\nusing
         UnityEngine;\r\n\r\npublic class DefaultScript : MonoBehaviour\r\n{\r\n   
-        public void OpedDoor(DoorScript door)\r\n    {\r\n\r\n    }\r\n}\r"
+        public void OpenDoor(DoorScript door)\r\n    {\r\n\r\n    }\r\n}\r"
       objectReference: {fileID: 0}
     - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: tipText
