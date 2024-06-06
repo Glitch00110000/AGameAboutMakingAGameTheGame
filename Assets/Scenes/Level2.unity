@@ -3018,6 +3018,10 @@ PrefabInstance:
         UnityEngine;\r\n\r\npublic class DefaultScript : MonoBehaviour\r\n{\r\n   
         public void OpenDoor(DoorScript door)\r\n    {\r\n\r\n    }\r\n}\r"
       objectReference: {fileID: 0}
+    - target: {fileID: 5799816186393493467, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_Volume
+      value: 0.161
+      objectReference: {fileID: 0}
     - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: tipText
       value: 'Try something like this:      door.OpenOrCloseDoor()   and also Use
@@ -3028,6 +3032,10 @@ PrefabInstance:
       propertyPath: CurrentSceneName
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 8434651442829832068, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f819b93eb237fdf4c997ba4fd96971e6, type: 3}
     - target: {fileID: 8836501594295196874, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: m_Name
       value: ----UI---- (1)

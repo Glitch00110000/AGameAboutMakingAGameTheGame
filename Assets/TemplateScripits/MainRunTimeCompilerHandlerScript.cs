@@ -88,6 +88,7 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 
     public void DisposeOfProxy()
     {
+        ErrorShower.SetActive(false);
         errorSpace.text = "error space";
         if (!proxy.IsDisposed && proxy != null)
         {
