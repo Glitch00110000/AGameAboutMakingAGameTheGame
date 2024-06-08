@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainRunTimeCompilerHandlerScript : MonoBehaviour
 {
@@ -33,6 +34,24 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     public GameObject tutorialPanel;
     public GameObject closeButton;
 
+
+    [SerializeField]
+    private GameObject MenuScreen;
+
+    [SerializeField]
+    private Slider MusikSlider;
+
+    [SerializeField]
+    private AudioSource musik;
+
+    [SerializeField]
+    private AudioSource[] OtherAudio;
+
+
+    [SerializeField]
+    private Slider OtherSoundsSlider;
+
+
     [SerializeField]
     private string tipText;
 
@@ -46,6 +65,34 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        musik.volume = PlayerPrefs.GetFloat("MusicVolume");
+        MusikSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+
+        OtherSoundsSlider.value = PlayerPrefs.GetFloat("OtherSoundVolume");
+
+        foreach (AudioSource a in OtherAudio)
+        {            
+            a.volume = PlayerPrefs.GetFloat("OtherSoundVolume");
+        }
+        MusikSlider.onValueChanged.AddListener((v) =>
+        {
+            musik.volume = v;
+            PlayerPrefs.SetFloat("MusicVolume", v);
+        });
+
+        OtherSoundsSlider.onValueChanged.AddListener((v) =>
+        {
+            foreach (AudioSource a in OtherAudio)
+            {
+                a.volume = v;
+                PlayerPrefs.SetFloat("OtherSoundVolume", v);
+            }
+        });
+
+
+
+
+
         SavedCode = InputField.text;
         // should the compiler be inicialized
         bool initCompiler = true;
@@ -141,6 +188,16 @@ public class MainRunTimeCompilerHandlerScript : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OpenMenu()
+    {
+        MenuScreen.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        MenuScreen.SetActive(false);
     }
 
 }

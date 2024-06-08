@@ -171,12 +171,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 338921995518263244, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034447550339032120, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195765581324852238, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1689253742804565986, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: m_Text
       value: "using System.Collections;\r\nusing System.Collections.Generic;\r\nusing
         UnityEngine;\r\n\r\npublic class RigidBodyChaos : MonoBehaviour\r\n{\r\n   
         public bool electricSheepAre = true;\n    public void ElectricSheep()\n   
         {\r\n\t\n\t\n    }\r\n}\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768762638703215474, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214654686667482067, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: m_text
+      value: "using System.Collections;\r\nusing System.Collections.Generic;\r\nusing
+        UnityEngine;\r\n\r\npublic class RigidBodyChaos : MonoBehaviour\r\n{\r\n   
+        public bool electricSheepAre = true;\n    public void ElectricSheep()\n   
+        {\r\n\t\n\t\n    }\r\n}\r\n\u200B"
       objectReference: {fileID: 0}
     - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: tipText
@@ -187,6 +210,18 @@ PrefabInstance:
       propertyPath: CurrentSceneName
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: OtherAudio.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: OtherAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 1132867079}
+    - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
+      propertyPath: OtherAudio.Array.data[2]
+      value: 
+      objectReference: {fileID: 37576436400669792}
     - target: {fileID: 8836501594295196874, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: m_Name
       value: ----UI---- (1)
@@ -1891,6 +1926,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.62
+--- !u!82 &1132867079 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1172158366612019159, guid: d1aa37b59b0947041926c5a295b3341b, type: 3}
+  m_PrefabInstance: {fileID: 574014084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1157644365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4951,6 +4991,11 @@ PrefabInstance:
 --- !u!4 &37576436400669791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1202099842176230800, guid: d1aa37b59b0947041926c5a295b3341b, type: 3}
+  m_PrefabInstance: {fileID: 37576436400669790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &37576436400669792 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1172158366612019159, guid: d1aa37b59b0947041926c5a295b3341b, type: 3}
   m_PrefabInstance: {fileID: 37576436400669790}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4143823384034179065
