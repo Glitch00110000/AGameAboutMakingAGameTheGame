@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using RoslynCSharp;
 
-public class PlayerScriptLvl3 : MonoBehaviour
+public class PlayerLevel4Script : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody2D rb;
@@ -12,16 +12,15 @@ public class PlayerScriptLvl3 : MonoBehaviour
     private float moveSpeed;
     private Vector2 moveInput;
 
+
+    [SerializeField]
+    private GameObject[] sheep;
+
     [SerializeField]
     private ScriptProxy scriptProxy;
     [SerializeField]
     private MainRunTimeCompilerHandlerScript scriptRunner;
 
-    [SerializeField]
-    private TutorialPaper tutPaper;
-
-    [SerializeField]
-    private Rigidbody2D box;
 
     [SerializeField]
     public GameObject tutPaperOpenButton;
@@ -38,7 +37,9 @@ public class PlayerScriptLvl3 : MonoBehaviour
         moveInput.y = Input.GetAxisRaw("Vertical");
 
         moveInput.Normalize();
-        
+
+       
+
 
         rb.velocity = moveInput * moveSpeed;
 
@@ -61,8 +62,21 @@ public class PlayerScriptLvl3 : MonoBehaviour
 
         if (scriptProxy != null)
         {
-            scriptProxy.SafeCall("MovableBox",box);
-            
+            scriptProxy.SafeCall("ElectricSheep");
+            bool old = (bool)scriptProxy.Fields["electricSheepAre"];
+            if (!old)
+            {
+                ChangeSpheep();
+            }
+
+        }
+    }
+
+    private void ChangeSpheep()
+    {
+        foreach (GameObject sheeppl in sheep)
+        {
+            sheeppl.SetActive(false);
         }
     }
 
