@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: CurrentSceneName
-      value: Level3
+      value: Level-4
       objectReference: {fileID: 0}
     - target: {fileID: 8087622542224820903, guid: ce8d86164135f094ba3d9c81a3c6e06f, type: 3}
       propertyPath: OtherAudio.Array.size
@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 1198598225}
     - target: {fileID: 6145631300462123266, guid: e49ed141786f93d4d9192a8030f249d2, type: 3}
       propertyPath: LevelName
-      value: MainMenu
+      value: Level-3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
