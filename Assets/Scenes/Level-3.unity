@@ -416,7 +416,7 @@ PrefabInstance:
       objectReference: {fileID: 1198598225}
     - target: {fileID: 6145631300462123266, guid: e49ed141786f93d4d9192a8030f249d2, type: 3}
       propertyPath: LevelName
-      value: MainMenu
+      value: Level1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4200,7 +4200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202099842176230800, guid: d1aa37b59b0947041926c5a295b3341b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 4.99
       objectReference: {fileID: 0}
     - target: {fileID: 1202099842176230800, guid: d1aa37b59b0947041926c5a295b3341b, type: 3}
       propertyPath: m_LocalPosition.z
